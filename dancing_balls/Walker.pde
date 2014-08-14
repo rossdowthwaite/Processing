@@ -4,34 +4,37 @@ class Walker
   boolean dir = true;
   float x, y;
   float tx, ty;
+  int d;
+  PImage photo;
 
-  Walker(int tX, int tY){
+  Walker(int tX, int tY, int d){
+    this.d = d;
     randomColor();
     tx = tX;
     ty = tY;
   }
  
   void render(){
-    int wi = int(random(40));
     
-    x = map(noise(tx), 0, 1, -200, width+200);
-    y = map(noise(ty),0,1, -200, height + 200);
+    changeBlue();
+    x = map(noise(tx), 0, 1, -400, width+400);
+    y = map(noise(ty),0,1, -400, height + 400);
     
     tx +=  0.01;
     ty +=  0.02;
     
     
-    ellipse(x, y, 90, 90);
-    fill(0, 0, b);
+    ellipse(x, y, d, d);
+    fill(r, g, b);
     strokeWeight(2);
     noStroke();
   }
 
   
   void randomColor(){
-    b = int(random(200, 255));
-    //g = int(random(255));
-    //r = int(random(255));
+    b = int(random(255));
+    g = int(random(255));
+    r = int(random(255));
   }
   
   void changeRed(){
@@ -53,16 +56,16 @@ class Walker
   };
   void changeBlue(){
     if(dir == true){
-      if(r < 255) {
-        r++;
+      if(b < 255) {
+        b++;
       } else {
         dir = false;
       };
     };
     
     if(dir == false){
-      if(r > 0) {
-        r--;
+      if(b > 0) {
+        b--;
       } else {
         dir = true;
       };

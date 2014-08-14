@@ -1,10 +1,10 @@
-// Random Walker 2
-// expanded from the Daniel Shiffman Lectures - The Nature of Code
-
-
 Walker w;
 int count = 0;
 ArrayList<Walker> walkerArray;
+
+// Random Walker
+// expanded from the Daniel Shiffman Lectures - The Nature of Code
+// Intro 1.1
 
 void setup(){
   // set the size   
@@ -14,19 +14,19 @@ void setup(){
   walkerArray = new ArrayList<Walker>();
   
   // create walkers and add them to the array  
-  while(count < 200){
-    walkerArray.add(new Walker(int(random(5000)), int(random(1000))));
+  while(count < 10){
+    walkerArray.add(new Walker(int(random(700)), int(random(500))));
     count++;
-  };
+  }
   background(255);
-  frameRate(30);
+  frameRate(100);
 }
 
 void draw(){
-  background(255);
   // step throught the array and call their methods  
   for(int i = 0; i < walkerArray.size(); i++)
   {
+    walkerArray.get(i).step();
     walkerArray.get(i).render();
     walkerArray.get(i).changeRed();
     // walkerArray.get(i).changeBlue();
