@@ -1,12 +1,10 @@
 Processing
 ==========
 
-A selection of Processing sketches and experiments
+A selection of Processing sketches and experiments.
 
-This chap is excellent - http://vimeo.com/channels/natureofcode
-
-Links
------
+Links to Sketches
+-----------------
 
 - particleExperiment1:  http://www.rwddesign.co.uk/canvas/particlesExperiment1/
 - particleExperiment2:  http://www.rwddesign.co.uk/canvas/particlesExperiment2/
@@ -15,4 +13,7 @@ Links
 - Acceleration : http://www.rwddesign.co.uk/canvas/Acceleration/
 - Force : http://www.rwddesign.co.uk/canvas/Force/
 
+Useful links
+------------
 
+This chap is excellent - http://vimeo.com/channels/natureofcode
